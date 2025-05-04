@@ -1,0 +1,12 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# OS-specific
+.DS_Store
+Thumbs.db
