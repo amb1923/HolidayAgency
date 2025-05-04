@@ -37,14 +37,32 @@ Customers want to travel from their home to a destination and return. The system
 ```bash
 mvn clean install
 ```
-▶️ Run the App Interactively
+### ▶️ Run the App Interactively
 ```
 mvn exec:java -Dexec.mainClass=org.example.Main
 ```
-🧪 How to Run the Tests
+### 💡 Alternative: Run from IntelliJ (No command line)
+
+If you're using IntelliJ IDEA, you can run the program directly:
+
+1. Open the project in IntelliJ
+2. In the `src/main/java/org/example/Main.java` file, right-click anywhere inside the class
+3. Click **Run 'Main.main()'**
+4. The app will start in the IntelliJ terminal, and you can follow the same CLI prompts
+
+
+### 🧪 How to Run the Tests
 ```
 mvn test
 ```
+### 💡 Alternative: Run tests from IntelliJ
+
+You can also run all unit and acceptance tests directly from IntelliJ:
+
+1. Open the project in IntelliJ
+2. Right-click the `test` directory (under `src/test/java`)
+3. Click **Run 'All Tests'** or select individual test classes (e.g., `JourneyPlannerTest`)
+4. Test results will appear in IntelliJ’s test runner pane
 
 ### ✅ Sample Journey Coverage
 
