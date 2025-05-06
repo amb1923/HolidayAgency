@@ -114,6 +114,29 @@ Total Journey Cost: £331.00
 - Unit and acceptance testing
 - Readable journey output with city names and flight miles
 
+
+### Test Sample Results
+
+Please Note:
+This solution selects the cheapest vehicle option based purely on cost — even if it involves using multiple cars for larger groups.
+Although the original sample output for Row 6 uses a taxi for 5 passengers, this implementation opts for 2 cars if that results in a lower total cost
+
+```
+#   | Vehicle | Vehicle Cost        | Outbound Route                 | Outbound Cost  | Inbound Route                  | Inbound Cost   | Total Cost 
+----+---------+---------------------+--------------------------------+----------------+--------------------------------+----------------+-------------
+1   | Car     | £11.00              | BF400--FD200                   | £120.00       | DE300--EB500                   | £160.00       | £291.00   
+2   | Car     | £15.00              | BF400--FD200                   | £60.00        | DE300--EB500                   | £80.00        | £155.00   
+3   | Car     | £11.00              | AB800--BF400--FD200            | £280.00       | No inbound flight              | £0.00         | £0.00     
+4   | Car     | £15.00              | No outbound flight             | £0.00         | AB800--BC900                   | £340.00       | £0.00     
+5   | Car     | £7.00               | BC900                          | £180.00       | CE200--EB500                   | £140.00       | £327.00   
+6   | Car     | £14.00              | BC900                          | £450.00       | CE200--EB500                   | £350.00       | £814.00   
+7   | Car     | £13.00              | DE300--EB500                   | £80.00        | BF400--FD200                   | £60.00        | £153.00   
+8   | Car     | £19.00              | No outbound flight             | £0.00         | AB800--BF400--FD200            | £560.00       | £0.00     
+9   | Taxi    | £4.00               | BF400--FD200                   | £120.00       | DE300--EB500                   | £160.00       | £284.00   
+10  | Car     | £45.00              | BF400--FD200                   | £540.00       | DE300--EB500                   | £720.00       | £1305.00  
+
+```
+
 ### 📌 Notes
 - Flight data is designed to sometimes favor indirect routes (via randomized distances)
 - Only 4 cities are included to simplify testing and ensure route coverage
