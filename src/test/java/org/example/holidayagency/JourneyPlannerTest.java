@@ -41,9 +41,9 @@ public class JourneyPlannerTest {
         assertEquals(47.0, suggestion.getTotalCost(), 0.01);
     }
 
-    // Indirect outbound and direct inbound flights
+    // Direct outbound and Indirect inbound flights
     @Test
-    void testIndirectOutboundAndDirectInboundFlights() {
+    void testDirectOutboundAndIndirectInboundFlights() {
         Journey journey = new Journey(1, "A", 10, "B");
         JourneySuggestion suggestion = planner.planJourney(journey);
 
